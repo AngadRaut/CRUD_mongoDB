@@ -12,4 +12,5 @@ import java.util.Optional;
 public interface PersonRepository extends MongoRepository<Person,String> {
     public static final Logger log = LoggerFactory.getLogger(PersonRepository.class);
     Optional<Person> findPersonByEmail(String email);
+    Optional<Person> findPersonByLastName(String lastName);
 }
